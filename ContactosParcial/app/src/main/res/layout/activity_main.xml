@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="325dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Contactos"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/rvContactos"
+        app:layout_constraintStart_toStartOf="@+id/inputNombre"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="9dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Nombre:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inputNombre"
+        app:layout_constraintEnd_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Telefono:"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/inputTelefono"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Correo:"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/inputCorreo"
+        app:layout_constraintEnd_toStartOf="@+id/inputCorreo" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Direccion:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/inputDireccion"
+        app:layout_constraintTop_toBottomOf="@+id/inputCorreo" />
+
+    <EditText
+        android:id="@+id/inputTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="@+id/inputNombre"
+        app:layout_constraintTop_toBottomOf="@+id/inputNombre" />
+
+    <EditText
+        android:id="@+id/inputCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/inputTelefono"
+        app:layout_constraintTop_toBottomOf="@+id/inputTelefono" />
+
+    <EditText
+        android:id="@+id/inputNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/inputDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/inputCorreo" />
+
+    <Button
+        android:id="@+id/buttonAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:text="Agregar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonListar"
+        app:layout_constraintStart_toStartOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/buttonListar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="4dp"
+        android:text="Listar"
+        app:layout_constraintEnd_toEndOf="@+id/inputDireccion"
+        app:layout_constraintTop_toBottomOf="@+id/inputDireccion" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContactos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="61dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

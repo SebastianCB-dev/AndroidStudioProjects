@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentInicio">
+
+    <fragment
+        android:id="@+id/fragmentTres"
+        android:name="com.example.fragmentdos.fragmentTres"
+        android:label="fragment_tres"
+        tools:layout="@layout/fragment_tres" >
+        <action
+            android:id="@+id/action_fragmentTres_to_fragmentDos"
+            app:destination="@id/fragmentDos" />
+        <action
+            android:id="@+id/action_fragmentTres_to_fragmentInicio"
+            app:destination="@id/fragmentInicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentUno"
+        android:name="com.example.fragmentdos.fragmentUno"
+        android:label="fragment_uno"
+        tools:layout="@layout/fragment_uno" >
+        <action
+            android:id="@+id/action_fragmentUno_to_fragmentInicio"
+            app:destination="@id/fragmentInicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDos"
+        android:name="com.example.fragmentdos.fragmentDos"
+        android:label="fragment_dos"
+        tools:layout="@layout/fragment_dos" >
+        <action
+            android:id="@+id/action_fragmentDos_to_fragmentInicio"
+            app:destination="@id/fragmentInicio" />
+        <action
+            android:id="@+id/action_fragmentDos_to_fragmentTres"
+            app:destination="@id/fragmentTres" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentInicio"
+        android:name="com.example.fragmentdos.fragmentInicio"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_fragmentInicio_to_fragmentUno"
+            app:destination="@id/fragmentUno" />
+        <action
+            android:id="@+id/action_fragmentInicio_to_fragmentDos"
+            app:destination="@id/fragmentDos" />
+    </fragment>
+</navigation>
